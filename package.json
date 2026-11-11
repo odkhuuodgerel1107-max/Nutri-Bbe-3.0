@@ -1,0 +1,21 @@
+{
+  "name": "nutri-bbe",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Nutri Bbe Mongolian nutrition tracker",
+  "scripts": {
+    "web": "python3 -m http.server 8080 --directory www",
+    "cap:sync": "cap sync",
+    "android:open": "cap open android",
+    "ios:open": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3",
+    "@capacitor/camera": "^7.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}

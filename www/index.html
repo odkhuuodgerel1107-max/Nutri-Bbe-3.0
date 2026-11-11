@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10251f"><meta name="description" content="Монгол хоолны илчлэг, шим тэжээл, дасгалын бүртгэл">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Nutri Bbe</title>
+<style>
+:root{--bg:#f4f7f4;--card:#fff;--ink:#17251f;--muted:#738078;--green:#176b4a;--mint:#e4f4eb;--line:#e5ebe6;--orange:#f0a44b;--red:#d85c56}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:13px;padding:12px 15px;background:var(--green);color:white;font-weight:650}.app{max-width:760px;margin:auto;padding:16px 15px 92px}.top{display:flex;align-items:center;justify-content:space-between;margin:6px 0 18px}.brand{font-weight:850;font-size:22px;letter-spacing:-.6px}.brand span{color:var(--green)}.date{font-size:13px;color:var(--muted)}.tabs{position:fixed;z-index:5;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom));gap:4px}.tabs button{background:transparent;color:var(--muted);font-size:12px;padding:9px 10px;flex:1;max-width:150px}.tabs button.active{background:var(--mint);color:var(--green)}.page{display:none}.page.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:17px;margin:12px 0;box-shadow:0 4px 16px #14271b08}.hero{background:linear-gradient(135deg,#123b2c,#1c7551);color:#fff;border:0}.hero .muted{color:#d2e8dc}.calrow{display:flex;align-items:center;gap:18px}.ring{width:126px;height:126px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;background:conic-gradient(#a7e2bf var(--pct),#ffffff30 0);position:relative}.ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:#174a36}.ringinner{z-index:1;text-align:center}.ring strong{display:block;font-size:25px}.ring small{font-size:11px;color:#d2e8dc}.muted{color:var(--muted);font-size:13px}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:17px}.stat{background:#ffffff17;border-radius:13px;padding:11px}.stat b{display:block;font-size:18px}.stat span{font-size:11px;color:#d2e8dc}.macro{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.macrobox{background:var(--bg);padding:12px;border-radius:13px}.macrobox b{display:block;font-size:18px}.bar{height:7px;border-radius:9px;background:#e8eee9;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--green);border-radius:9px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:22px 2px 8px}.sectionhead h2{font-size:17px;margin:0}.foodrow{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.foodrow:last-child{border:0}.foodemoji{width:42px;height:42px;background:var(--mint);border-radius:12px;display:grid;place-items:center;font-size:22px}.foodinfo{flex:1;min-width:0}.foodinfo b{display:block}.foodinfo small{color:var(--muted)}.foodcal{text-align:right;font-weight:750}.foodcal small{display:block;color:var(--muted);font-weight:400}.field{margin:11px 0}.field label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;color:var(--ink)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.secondary{background:var(--mint);color:var(--green)}.danger{background:#fff0ef;color:var(--red)}.pill{display:inline-block;background:var(--mint);color:var(--green);border-radius:20px;padding:5px 9px;font-size:11px;font-weight:700}.hide{display:none!important}.note{font-size:12px;color:var(--muted);line-height:1.5}.foodlist{max-height:260px;overflow:auto}.foodpick{display:flex;justify-content:space-between;gap:10px;padding:10px;border-bottom:1px solid var(--line);cursor:pointer}.foodpick:hover{background:var(--mint)}.result{background:var(--mint);padding:12px;border-radius:12px;margin-top:10px}.weightchart{display:flex;align-items:end;gap:7px;height:110px;padding:10px 2px}.weightchart div{flex:1;background:#a8d9bc;border-radius:6px 6px 2px 2px;min-height:5px;position:relative}.weightchart span{position:absolute;bottom:-19px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted)}.photo{width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-top:8px}.smallbtn{padding:8px 11px;font-size:12px}.empty{text-align:center;color:var(--muted);padding:18px}.foot{font-size:11px;color:var(--muted);text-align:center;margin:24px 0}
+
+body.custom-wallpaper{background-size:cover;background-position:center;background-attachment:fixed}
+body.custom-wallpaper .app{background:#f4f7f4e8;backdrop-filter:blur(3px);border-radius:24px}
+body.theme-mountain{background:linear-gradient(145deg,#dfeee8,#b9d4c8 45%,#f4f7f4)}
+body.theme-ocean{background:linear-gradient(145deg,#d8eef0,#a9d1d6 50%,#f4f7f4)}
+body.theme-sunset{background:linear-gradient(145deg,#f8e4d3,#f2c8aa 50%,#f7f3eb)}
+body.theme-minimal{background:#f4f7f4}
+body.theme-dark{background:#14231d}
+body.theme-dark .card{background:#21352c;color:#f1f7f2;border-color:#385044}
+body.theme-dark .field input,body.theme-dark .field select,body.theme-dark .field textarea{background:#172820;color:#f1f7f2;border-color:#385044}
+body.theme-dark .macrobox{background:#172820}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="brand">🥬 Nutri <span>Bbe</span></div><div class="date" id="today"></div></header>
+<section id="home" class="page active">
+ <div class="card hero">
+  <div class="muted">Өнөөдрийн илчлэгийн төсөв</div>
+  <div class="calrow"><div class="ring" id="ring" style="--pct:0%"><div class="ringinner"><strong id="remain">0</strong><small>ккал үлдсэн</small></div></div>
+  <div><div class="muted">Хэрэглэх зорилт</div><div style="font-size:28px;font-weight:800" id="goal">2,300</div><div class="muted">ккал / өдөр</div><div style="margin-top:12px"><span class="pill" id="goalMode">Жингээ барих</span></div></div></div>
+  <div class="statgrid"><div class="stat"><b id="eaten">0</b><span>Идсэн ккал</span></div><div class="stat"><b id="burned">0</b><span>Дасгалаар шатаасан</span></div><div class="stat"><b id="net">0</b><span>Цэвэр ккал</span></div></div>
+ </div>
+ <div class="card"><div class="sectionhead" style="margin-top:0"><h2>Өдрийн шим тэжээл</h2><span class="muted">грамм</span></div><div class="macro" id="macros"></div></div>
+ <div class="sectionhead"><h2>Өнөөдрийн хоол</h2><button class="smallbtn" onclick="openAdd()">+ Хоол нэмэх</button></div>
+ <div class="card" id="todayMeals"></div>
+ <div class="sectionhead"><h2>Дасгал хөдөлгөөн</h2><button class="smallbtn" onclick="showPage('activity')">+ Бүртгэх</button></div>
+ <div class="card" id="todayActivities"></div>
+</section>
+<section id="food" class="page">
+ <div class="sectionhead"><h2>Хоол бүртгэх</h2><span class="pill">Зургаар / гараар</span></div>
+ <div class="card">
+  <div class="field"><label>Хоолны зураг (танихад туслах)</label><input type="file" accept="image/*" capture="environment" id="foodPhoto"><img id="preview" class="photo hide"></div>
+  <p class="note">Зураг оруулах боломжтой. Одоогийн хувилбарт зураг автоматаар AI-аар танихгүй; доорх сангаас хоолоо сонгоод порцоо баталгаажуулна.</p>
+  <div class="field"><label>Хоол хайх</label><input id="foodSearch" placeholder="Жишээ: бууз, өндөг, тахиа..." oninput="renderFoodList()"></div>
+  <div class="foodlist" id="foodList"></div>
+ </div>
+ <div class="card" id="selectedCard"><div class="empty">Дээрх жагсаалтаас хоол сонгоно уу.</div></div>
+ <div class="card"><h3 style="margin-top:0">✨ ChatGPT AI хоол таних</h3>
+  <p class="note">Хоолны зураг сонгох эсвэл нэр, орц, хэмжээг бичээд шинжлүүлнэ. AI-ийн тооцоог шалгаж байж өдрийн бүртгэлд нэмнэ.</p>
+  <div class="field"><label>AI backend серверийн HTTPS хаяг</label><input id="aiBackendUrl" type="url" placeholder="https://your-api.example.com"></div>
+  <div class="field"><label>Зураг авах / галерейгаас сонгох</label><input type="file" accept="image/*" capture="environment" id="aiPhoto"></div>
+  <img id="aiPreview" class="photo hide">
+  <div class="field"><label>Хоолны нэр, орц, порцын тайлбар</label><textarea id="aiDescription" rows="3" placeholder="Жишээ: 5 ширхэг үхрийн махтай бууз, дунд зэргийн хэмжээтэй. Эсвэл 200 г чанасан үхрийн мах, 150 г будаа."></textarea></div>
+  <button onclick="recognizeFood()">AI-аар шинжлэх</button>
+  <div id="aiResult" class="result hide"></div>
+  <div id="aiConfirm" class="hide"></div>
+  <p class="note">Зураг болон бичвэрийг зөвхөн таны тохируулсан backend OpenAI API руу дамжуулна. API түлхүүр утсан дээр хадгалагдахгүй. AI-ийн порц, шим тэжээлийн үнэлгээ алдаатай байж болох тул баталгаажуулна уу.</p>
+ </div>
+ <div class="card"><h3 style="margin-top:0">Өөрийн хоол нэмэх</h3><div class="grid2"><div class="field"><label>Хоолны нэр</label><input id="customName" placeholder="Хоолны нэр"></div><div class="field"><label>100 г дахь ккал</label><input id="customKcal" type="number" min="0" placeholder="ккал"></div><div class="field"><label>Уураг (г)</label><input id="customP" type="number" min="0" placeholder="г"></div><div class="field"><label>Нүүрс ус (г)</label><input id="customC" type="number" min="0" placeholder="г"></div><div class="field"><label>Өөх тос (г)</label><input id="customF" type="number" min="0" placeholder="г"></div></div><button onclick="addCustom()">Хоолны санд хадгалах</button></div>
+</section>
+<section id="activity" class="page">
+ <div class="sectionhead"><h2>Дасгалын бүртгэл</h2></div>
+ <div class="card"><div class="grid2"><div class="field"><label>Дасгал</label><select id="exercise"><option value="CrossFit">CrossFit</option><option value="Swimming">Усанд сэлэлт</option><option value="Running">Гүйлт</option><option value="Walking">Алхалт</option><option value="Boxing">Бокс</option><option value="Strength">Хүчний дасгал</option><option value="Cycling">Дугуй</option><option value="Other">Бусад</option></select></div><div class="field"><label>Хугацаа (минут)</label><input id="minutes" type="number" min="1" value="45"></div><div class="field"><label>Биеийн жин (кг)</label><input id="actWeight" type="number" min="1"></div><div class="field"><label>Эрчим</label><select id="intensity"><option value="1">Хөнгөн</option><option value="1.25" selected>Дунд</option><option value="1.5">Өндөр</option></select></div></div><div class="result" id="burnPreview">Тооцоолсон зарцуулалт: — ккал</div><button style="margin-top:12px" onclick="addActivity()">Дасгал хадгалах</button><p class="note">Калори нь MET-д суурилсан ойролцоо тооцоо; цаг, зүрхний цохилтын бодит хэмжилт биш.</p></div>
+ <div class="sectionhead"><h2>Өнөөдрийн дасгал</h2></div><div class="card" id="activityList"></div>
+ <div class="card"><h3 style="margin-top:0">Garmin / Health Connect</h3><p class="note">Энэ хувилбар дасгалыг гараар бүртгэж, калорийг тооцно. Garmin Forerunner 265-аас автоматаар синк хийхэд Garmin Health API эсвэл Android Health Connect-тэй native Android холболт, хэрэглэгчийн зөвшөөрөл шаардлагатай. Одоогоор шууд холболт хийгдээгүй.</p></div>
+</section>
+<section id="stats" class="page">
+ <div class="sectionhead"><h2>Тайлан ба жин</h2></div><div class="card"><h3 style="margin-top:0">Сүүлийн 7 өдрийн хэрэглээ</h3><div id="weekStats"></div></div>
+ <div class="card"><h3 style="margin-top:0">Жингийн бүртгэл</h3><div class="grid2"><div class="field"><label>Жин (кг)</label><input type="number" id="weightInput" step=".1" placeholder="75.0"></div><div class="field"><label>Огноо</label><input type="date" id="weightDate"></div></div><button onclick="addWeight()">Жин хадгалах</button><div id="weightChart" class="weightchart"></div><div id="weightHistory" class="note"></div></div>
+ <div class="card"><h3 style="margin-top:0">Аппын дэвсгэр зураг, өнгө</h3>
+ <p class="note">Бэлэн загвараас сонгох эсвэл өөрийн утасны зургаа дэвсгэр болгоорой. Сонголт энэ төхөөрөмжид хадгалагдана.</p>
+ <div class="grid2">
+ <button class="secondary" onclick="setTheme('forest')">🌲 Ойн ногоон</button>
+ <button class="secondary" onclick="setTheme('mountain')">🏔️ Уулын өглөө</button>
+ <button class="secondary" onclick="setTheme('ocean')">🌊 Далайн цэнхэр</button>
+ <button class="secondary" onclick="setTheme('sunset')">🌅 Нар жаргах</button>
+ <button class="secondary" onclick="setTheme('minimal')">🤍 Цэвэр минимал</button>
+ <button class="secondary" onclick="setTheme('dark')">🌙 Шөнийн горим</button>
+ </div>
+ <div class="field"><label>Өөрийн дэвсгэр зураг сонгох</label><input type="file" accept="image/*" id="wallpaperInput"></div>
+ <div class="actions"><button class="secondary smallbtn" onclick="resetWallpaper()">Анхны загвар сэргээх</button></div>
+ </div>
+ <div class="card"><h3 style="margin-top:0">Өгөгдөл</h3><div class="actions"><button class="secondary" onclick="exportData()">Нөөц файл татах</button><label class="secondary smallbtn" style="border-radius:13px;cursor:pointer">Нөөц сэргээх<input type="file" accept="application/json" id="importFile" class="hide"></label><button class="danger" onclick="clearToday()">Өнөөдрийн бүртгэл арилгах</button></div><p class="note">Таны бүртгэл энэ төхөөрөмжийн браузерт хадгалагдана. Браузерын өгөгдөл арилгавал нөөц файлаас сэргээнэ.</p></div>
+</section>
+<section id="profile" class="page">
+ <div class="sectionhead"><h2>Хувийн мэдээлэл</h2></div><div class="card">
+ <div class="grid2"><div class="field"><label>Нас</label><input id="age" type="number" value="37"></div><div class="field"><label>Хүйс</label><select id="sex"><option value="male">Эрэгтэй</option><option value="female">Эмэгтэй</option></select></div><div class="field"><label>Өндөр (см)</label><input id="height" type="number" value="176"></div><div class="field"><label>Жин (кг)</label><input id="weight" type="number" value="75" step=".1"></div></div>
+ <div class="field"><label>Өдөр тутмын хөдөлгөөн</label><select id="activityLevel"><option value="1.2">Сууж ажилладаг / бага хөдөлгөөн</option><option value="1.375">Хөнгөн идэвхтэй</option><option value="1.55" selected>Дунд идэвхтэй (7 хоногт 3–5 өдөр)</option><option value="1.725">Идэвхтэй (6–7 өдөр)</option><option value="1.9">Маш өндөр идэвхтэй</option></select></div>
+ <div class="field"><label>Зорилго</label><select id="mode"><option value="maintain">Жингээ барих</option><option value="lose">Жин хасах</option><option value="gain">Жин нэмэх</option></select></div>
+ <button onclick="saveProfile()">Хадгалаад хэрэгцээ тооцох</button><div class="result" id="profileResult"></div><p class="note">Тооцоолол нь Mifflin–St Jeor томьёоны ойролцоо үнэлгээ. Өдөр тутмын зорилтыг жингийн бодит өөрчлөлтөөр 2–3 долоо хоногт тохируулна.</p></div>
+</section>
+<div class="foot">Nutri Bbe · Илчлэг, шим тэжээлийн тооцоо нь ойролцоо утга.</div>
+</div>
+<nav class="tabs"><button class="active" data-page="home" onclick="showPage('home')">🏠<br>Нүүр</button><button data-page="food" onclick="showPage('food')">🍲<br>Хоол</button><button data-page="activity" onclick="showPage('activity')">🏃<br>Дасгал</button><button data-page="stats" onclick="showPage('stats')">📊<br>Тайлан</button><button data-page="profile" onclick="showPage('profile')">👤<br>Профайл</button></nav>
+<script>
+const DB=[
+["Бууз","🥟",250,10,25,12],["Хуушуур","🥟",290,10,27,16],["Цуйван","🍜",190,8,22,8],["Банштай цай","🍵",85,4,8,4],["Банш","🥟",230,10,27,9],["Гуляш","🍲",145,12,8,7],["Хорхог","🍖",220,25,1,13],["Чанасан үхрийн мах","🥩",250,27,0,16],["Шарсан үхрийн мах","🥩",290,26,0,20],["Аарц","🥛",95,11,7,2],["Тараг, чихэргүй","🥛",61,3.5,4.7,3.3],["Сүү 2.5%","🥛",52,3.4,5,2.5],["Өндөг","🥚",143,13,1,10],["Талх","🍞",265,9,49,3.2],["Овьёос хуурай","🥣",389,17,66,7],["Будаа агшаасан","🍚",130,2.7,28,0.3],["Төмс чанасан","🥔",87,1.9,20,0.1],["Тахианы цээж мах","🍗",165,31,0,3.6],["Салмон","🐟",208,20,0,13],["Банана","🍌",89,1.1,23,0.3],["Алим","🍎",52,.3,14,.2],["Самрын тос","🥜",588,25,20,50],["Хулууны үр","🌱",559,30,11,49],["Бяслаг","🧀",350,25,2,27],["Гурилтай шөл","🍜",90,5,12,2.5],["Кимбаб","🍙",180,6,28,5],["Пицца","🍕",266,11,33,10],["Шоколад","🍫",546,5,61,31]
+["Бантан", "🍲", 105, 6, 13, 3],["Борцтой шөл", "🍲", 75, 7, 7, 2],["Махтай пирошки", "🥟", 280, 10, 30, 13],["Хуушуур (үхрийн махтай)", "🥟", 295, 11, 26, 16],["Бууз (үхрийн махтай)", "🥟", 240, 11, 25, 10],["Мантуун бууз", "🥟", 230, 9, 35, 5],["Шарсан банш", "🥟", 270, 11, 28, 12],["Гурилтай шөл (үхрийн махтай)", "🍜", 110, 7, 14, 3],["Ногоотой шөл", "🍲", 55, 2, 9, 1],["Будаатай хуурга", "🍚", 175, 7, 25, 5],["Өндөгтэй хуурга", "🍳", 190, 9, 15, 10],["Төмстэй хуурга", "🥔", 160, 4, 24, 5],["Хонины чанасан мах", "🍖", 294, 25, 0, 21],["Адууны мах чанасан", "🍖", 175, 28, 0, 6],["Ямааны мах чанасан", "🍖", 143, 27, 0, 3],["Үхрийн элэг", "🥩", 135, 20, 4, 4],["Хонины элэг", "🥩", 135, 20, 4, 4],["Өөхтэй хонины мах", "🍖", 330, 17, 0, 29],["Өөхгүй үхрийн мах", "🥩", 170, 26, 0, 7],["Тахианы гуя", "🍗", 209, 26, 0, 11],["Тахианы далавч", "🍗", 203, 30, 0, 8],["Загас шарсан", "🐟", 220, 23, 5, 12],["Туна загас лаазалсан", "🐟", 116, 26, 0, 1],["Аарц (хатаасан)", "🥛", 330, 45, 25, 4],["Өрөм", "🥛", 400, 4, 4, 40],["Зөөхий 20%", "🥛", 206, 2.8, 3.4, 20],["Ээзгий", "🥛", 370, 25, 45, 10],["Ааруул", "🥛", 350, 30, 45, 5],["Айраг", "🥛", 50, 2, 5, 2],["Тараг 3.2%", "🥛", 61, 3.5, 4.7, 3.3],["Кефир", "🥛", 55, 3.3, 4.8, 2],["Цөцгийн тос", "🧈", 717, 0.9, 0.1, 81],["Гурил", "🌾", 364, 10, 76, 1],["Гоймон чанасан", "🍝", 158, 5.8, 31, 0.9],["Хөц будаа агшаасан", "🍚", 123, 4.3, 25, 0.4],["Шар будаа агшаасан", "🍚", 119, 3.5, 23, 1],["Хар талх", "🍞", 250, 9, 48, 3],["Боорцог", "🍪", 450, 8, 55, 22],["Ааруултай боов", "🍪", 390, 9, 60, 12],["Бялуу", "🍰", 350, 5, 50, 15],["Блинчик", "🥞", 220, 6, 28, 9],["Мантуу", "🥟", 220, 7, 43, 2],["Хуушуурын гурил", "🌾", 350, 9, 72, 2],["Шарсан төмс", "🍟", 312, 3.4, 41, 15],["Лууван", "🥕", 41, 0.9, 10, 0.2],["Байцаа", "🥬", 25, 1.3, 6, 0.1],["Брокколи", "🥦", 34, 2.8, 7, 0.4],["Өргөст хэмх", "🥒", 15, 0.7, 3.6, 0.1],["Улаан лооль", "🍅", 18, 0.9, 3.9, 0.2],["Сонгино", "🧅", 40, 1.1, 9.3, 0.1],["Манжин", "🥬", 43, 1.6, 10, 0.2],["Бууцай", "🥬", 23, 2.9, 3.6, 0.4],["Үзэм", "🍇", 299, 3.1, 79, 0.5],["Чацаргана", "🫐", 82, 1.2, 10, 5],["Нэрс", "🫐", 57, 0.7, 14, 0.3],["Гүзээлзгэнэ", "🍓", 32, 0.7, 7.7, 0.3],["Жүрж", "🍊", 47, 0.9, 12, 0.1],["Лийр", "🍐", 57, 0.4, 15, 0.1],["Самар хуш", "🌰", 654, 15, 14, 65],["Бүйлс", "🌰", 579, 21, 22, 50],["Газрын самар", "🥜", 567, 26, 16, 49],["Маалингын үр", "🌱", 534, 18, 29, 42],["Зөгийн бал", "🍯", 304, 0.3, 82, 0],["Чанасан шош", "🫘", 127, 8.7, 23, 0.5],["Ногоон вандуй", "🫛", 81, 5.4, 14, 0.4],["Дүпү", "🧈", 76, 8, 1.9, 4.8],["Бор гурилын талх", "🍞", 247, 13, 41, 4.2],["Каша", "🥣", 110, 3, 20, 2],["Хар кофе", "☕", 2, 0.3, 0, 0],["Сүүтэй цай", "🍵", 35, 1.5, 3, 1.5],["Хар цай", "🍵", 1, 0, 0.2, 0],].map((x,i)=>({id:"f"+i,name:x[0],emoji:x[1],k:x[2],p:x[3],c:x[4],f:x[5]}));
+let data=JSON.parse(localStorage.getItem("nutri_mn")||"null")||{profile:{age:37,sex:"male",height:176,weight:75,level:1.55,mode:"maintain",goal:2300},meals:[],activities:[],weights:[],custom:[]};
+let chosen=null,grams=100,mealType="Өдрийн хоол";
+const $=id=>document.getElementById(id), today=()=>new Date().toISOString().slice(0,10);
+function save(){localStorage.setItem("nutri_mn",JSON.stringify(data))}
+function dayMeals(){return data.meals.filter(x=>x.date===today())}
+function dayActs(){return data.activities.filter(x=>x.date===today())}
+function sums(arr){return arr.reduce((a,x)=>{a.k+=x.kcal;a.p+=x.p;a.c+=x.c;a.f+=x.f;return a},{k:0,p:0,c:0,f:0})}
+function fmt(n){return Math.round(n).toLocaleString("en-US")}
+function showPage(p){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===p));document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active",x.dataset.page===p));if(p==="food")renderFoodList();if(p==="activity")renderActivities();if(p==="stats")renderStats();if(p==="profile")loadProfile()}
+function render(){let m=sums(dayMeals()),burn=dayActs().reduce((a,x)=>a+x.burn,0),g=data.profile.goal||2300,remain=g-m.k; $("today").textContent=new Date().toLocaleDateString("mn-MN",{weekday:"long",month:"long",day:"numeric"});$("goal").textContent=fmt(g);$("eaten").textContent=fmt(m.k);$("burned").textContent=fmt(burn);$("net").textContent=fmt(m.k-burn);$("remain").textContent=fmt(remain);$("ring").style.setProperty("--pct",Math.min(100,m.k/g*100)+"%");$("goalMode").textContent={maintain:"Жингээ барих",lose:"Жин хасах",gain:"Жин нэмэх"}[data.profile.mode];$("macros").innerHTML=[["Уураг",m.p,data.profile.pgoal||120],["Нүүрс ус",m.c,data.profile.cgoal||250],["Өөх тос",m.f,data.profile.fgoal||70]].map(x=>`<div class="macrobox"><span class="muted">${x[0]}</span><b>${x[1].toFixed(1)} г</b><div class="bar"><i style="width:${Math.min(100,x[1]/x[2]*100)}%"></i></div><small class="muted">зорилт ${x[2]} г</small></div>`).join("");$("todayMeals").innerHTML=renderMealRows(dayMeals());$("todayActivities").innerHTML=dayActs().length?dayActs().map(a=>`<div class="foodrow"><div class="foodemoji">🏃</div><div class="foodinfo"><b>${a.name}</b><small>${a.min} минут</small></div><div class="foodcal">${a.burn} ккал</div></div>`).join(""):'<div class="empty">Одоогоор дасгал бүртгээгүй байна.</div>';save()}
+function renderMealRows(arr){if(!arr.length)return '<div class="empty">Хоол бүртгээгүй байна. “Хоол нэмэх” дээр дарна уу.</div>';return arr.map(x=>`<div class="foodrow"><div class="foodemoji">${x.emoji||"🍽️"}</div><div class="foodinfo"><b>${x.name}</b><small>${x.type} · ${x.grams} г · У ${x.p.toFixed(1)} / НУ ${x.c.toFixed(1)} / Ө ${x.f.toFixed(1)} г</small></div><div class="foodcal">${fmt(x.kcal)}<small>ккал <a href="#" onclick="delMeal('${x.id}');return false">устгах</a></small></div></div>`).join("")}
+function openAdd(){showPage("food")}
+function renderFoodList(){let q=$("foodSearch").value.toLowerCase(),list=[...DB,...data.custom];$("foodList").innerHTML=list.filter(f=>f.name.toLowerCase().includes(q)).map(f=>`<div class="foodpick" onclick="selectFood('${f.id}')"><span>${f.emoji} ${f.name}</span><small>${f.k} ккал / 100 г</small></div>`).join("")||'<div class="empty">Илэрц олдсонгүй.</div>'}
+function selectFood(id){chosen=[...DB,...data.custom].find(f=>f.id===id);grams=100;$("selectedCard").innerHTML=`<h3 style="margin-top:0">${chosen.emoji} ${chosen.name}</h3><div class="field"><label>Порцын жин (грамм)</label><input id="grams" type="number" min="1" value="100" oninput="updateFoodPreview()"></div><div class="field"><label>Хоолны төрөл</label><select id="mealType"><option>Өглөөний цай</option><option>Өдрийн хоол</option><option>Оройн хоол</option><option>Завсрын хоол</option></select></div><div class="result" id="foodPreview"></div><button style="margin-top:10px" onclick="addMeal()">Өдрийн бүртгэлд нэмэх</button>`;updateFoodPreview()}
+function updateFoodPreview(){if(!chosen)return;let g=Math.max(0,+$("grams").value||0),k=g/100;$("foodPreview").innerHTML=`<b>${fmt(chosen.k*k)} ккал</b><br>Уураг ${ (chosen.p*k).toFixed(1)} г · Нүүрс ус ${(chosen.c*k).toFixed(1)} г · Өөх тос ${(chosen.f*k).toFixed(1)} г`}
+function addMeal(){if(!chosen)return;let g=Math.max(1,+$("grams").value||0),k=g/100;data.meals.push({id:crypto.randomUUID(),date:today(),name:chosen.name,emoji:chosen.emoji,grams:g,type:$("mealType").value,kcal:chosen.k*k,p:chosen.p*k,c:chosen.c*k,f:chosen.f*k});$("selectedCard").innerHTML='<div class="result">Хоол бүртгэгдлээ.</div>';chosen=null;render();showPage("home")}
+function delMeal(id){data.meals=data.meals.filter(x=>x.id!==id);render()}
+$("foodPhoto").addEventListener("change",e=>{let f=e.target.files[0];if(f){$("preview").src=URL.createObjectURL(f);$("preview").classList.remove("hide")}})
+
+
+let aiCandidate=null;
+$("aiBackendUrl").value=localStorage.getItem("nutri_bbe_backend_url")||"";
+$("aiBackendUrl").addEventListener("change",()=>localStorage.setItem("nutri_bbe_backend_url",$("aiBackendUrl").value.trim().replace(/\/$/,"")));
+$("aiPhoto").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;$("aiPreview").src=URL.createObjectURL(f);$("aiPreview").classList.remove("hide")});
+async function recognizeFood(){
+ const file=$("aiPhoto").files[0],description=$("aiDescription").value.trim(),out=$("aiResult"),confirmBox=$("aiConfirm");
+ if(!file&&!description){alert("Зураг сонгох эсвэл хоолны тайлбар бичнэ үү.");return}
+ if(file && file.size>8*1024*1024){alert("Зургийн хэмжээ 8 MB-аас бага байна уу.");return}
+ out.classList.remove("hide");confirmBox.classList.add("hide");out.textContent="ChatGPT AI хоолыг шинжилж байна…";
+ try{
+  const fd=new FormData();if(file)fd.append("image",file);fd.append("description",description);
+  const res=await fetch((localStorage.getItem("nutri_bbe_backend_url")||window.NUTRI_API_BASE||"")+"/api/analyze",{method:"POST",body:fd});
+  const payload=await res.json();if(!res.ok)throw new Error(payload.error||("HTTP "+res.status));
+  const x=payload.food;
+  if(!x||!x.name||!Number.isFinite(+x.calories_kcal))throw new Error("AI хариуны формат буруу байна.");
+  aiCandidate=x;
+  out.innerHTML=`<b>${x.name}</b><br>Порц: ${x.portion_grams} г · ${Math.round(x.calories_kcal)} ккал<br>Уураг ${x.protein_g} г · Нүүрс ус ${x.carbs_g} г · Өөх тос ${x.fat_g} г<br><small>${x.notes||""}</small><br><small>Итгэлцэл: ${x.confidence||"тодорхойгүй"}</small>`;
+  confirmBox.classList.remove("hide");
+  confirmBox.innerHTML=`<div class="field"><label>Порцын хэмжээг засах (г)</label><input id="aiPortion" type="number" min="1" value="${Math.max(1,Math.round(x.portion_grams||100))}"></div><div class="field"><label>Хоолны төрөл</label><select id="aiMealType"><option>Өглөөний цай</option><option>Өдрийн хоол</option><option>Оройн хоол</option><option>Завсрын хоол</option></select></div><button onclick="acceptAiFood()">Бүртгэлд нэмэх</button> <button class="secondary" onclick="aiCandidate=null;$('aiConfirm').classList.add('hide')">Болих</button>`;
+ }catch(e){out.textContent="AI танилт амжилтгүй: "+e.message+" — backend сервер ажиллаж байгаа эсэх, OPENAI_API_KEY тохиргоог шалгана уу."}
+}
+function acceptAiFood(){
+ if(!aiCandidate)return;
+ const x=aiCandidate, grams=Math.max(1,+$("aiPortion").value||x.portion_grams||100), ratio=grams/(+x.portion_grams||100);
+ data.meals.push({id:crypto.randomUUID(),date:today(),name:x.name,emoji:"🍽️",grams,type:$("aiMealType").value,kcal:+x.calories_kcal*ratio,p:+x.protein_g*ratio,c:+x.carbs_g*ratio,f:+x.fat_g*ratio});
+ aiCandidate=null;$("aiConfirm").classList.add("hide");$("aiResult").textContent="Хоол бүртгэгдлээ. Хоолны шим тэжээл ойролцоо тооцоо гэдгийг анхаарна уу.";render();showPage("home");
+}
+function addCustom(){let name=$("customName").value.trim(),k=+$("customKcal").value,p=+$("customP").value,c=+$("customC").value,f=+$("customF").value;if(!name||![k,p,c,f].every(Number.isFinite)||k<0||p<0||c<0||f<0)return alert("Бүх талбарыг зөв бөглөнө үү.");data.custom.push({id:"c"+crypto.randomUUID(),name,emoji:"🍽️",k,p,c,f});save();renderFoodList();alert("Хоолны санд хадгаллаа.")}
+const mets={CrossFit:8,Swimming:6,Running:9.8,Walking:3.5,Boxing:7,Strength:5,Cycling:7,Other:4};
+function calcBurn(){let w=+$("actWeight").value||data.profile.weight||75,min=+$("minutes").value||0,m=$("exercise").value,int=+$("intensity").value;return Math.round((mets[m]||4)*3.5*w/200*min*int)}
+function previewBurn(){$("burnPreview").textContent="Тооцоолсон зарцуулалт: "+calcBurn()+" ккал"}
+["exercise","minutes","actWeight","intensity"].forEach(id=>$(id).addEventListener("input",previewBurn));
+function addActivity(){let min=+$("minutes").value;if(min<1)return alert("Хугацааг зөв оруулна уу.");data.activities.push({id:crypto.randomUUID(),date:today(),name:$("exercise").selectedOptions[0].text,min,burn:calcBurn()});render();renderActivities();alert("Дасгал бүртгэгдлээ.")}
+function renderActivities(){$("activityList").innerHTML=dayActs().length?dayActs().map(a=>`<div class="foodrow"><div class="foodemoji">🏋️</div><div class="foodinfo"><b>${a.name}</b><small>${a.min} минут</small></div><div class="foodcal">${a.burn} ккал</div></div>`).join(""):'<div class="empty">Өнөөдрийн дасгал алга.</div>';previewBurn()}
+function loadProfile(){let p=data.profile;["age","sex","height","weight","mode"].forEach(id=>$(id).value=p[id]??$(id).value);$("activityLevel").value=p.level||1.55;$("actWeight").value=p.weight||75;showProfileResult()}
+function calcTarget(p){let bmr=10*p.weight+6.25*p.height-5*p.age+(p.sex==="male"?5:-161),tdee=bmr*p.level,goal=tdee+(p.mode==="lose"?-400:p.mode==="gain"?300:0);return {bmr:Math.round(bmr),tdee:Math.round(tdee),goal:Math.round(goal)}}
+function showProfileResult(){let r=calcTarget(data.profile);$("profileResult").innerHTML=`Суурь зарцуулалт (BMR): <b>${r.bmr} ккал</b><br>Өдрийн нийт хэрэгцээ (TDEE): <b>${r.tdee} ккал</b><br>Таны зорилтот хэрэглээ: <b>${r.goal} ккал</b>`}
+function saveProfile(){let p={age:+$("age").value,sex:$("sex").value,height:+$("height").value,weight:+$("weight").value,level:+$("activityLevel").value,mode:$("mode").value};if(!p.age||!p.height||!p.weight)return alert("Мэдээллээ бүрэн оруулна уу.");let r=calcTarget(p);p.goal=r.goal;p.pgoal=Math.round(p.weight*1.6);p.fgoal=Math.round(p.goal*.27/9);p.cgoal=Math.round((p.goal-p.pgoal*4-p.fgoal*9)/4);data.profile=p;$("actWeight").value=p.weight;save();showProfileResult();render();alert("Профайл хадгалагдлаа.")}
+function addWeight(){let w=+$("weightInput").value,d=$("weightDate").value||today();if(w<1)return alert("Жингээ зөв оруулна уу.");data.weights.push({w,d});data.weights.sort((a,b)=>a.d.localeCompare(b.d));data.profile.weight=w;save();renderStats()}
+function renderStats(){let days=Array.from({length:7},(_,i)=>{let d=new Date();d.setDate(d.getDate()-(6-i));return d.toISOString().slice(0,10)});$("weekStats").innerHTML=days.map(d=>{let v=sums(data.meals.filter(x=>x.date===d)).k;return `<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>${new Date(d+"T12:00:00").toLocaleDateString("mn-MN",{weekday:"short",day:"numeric"})}</span><b>${fmt(v)} ккал</b></div>`}).join("");let ws=data.weights.slice(-7),max=Math.max(...ws.map(x=>x.w),1),min=Math.min(...ws.map(x=>x.w),max);$("weightChart").innerHTML=ws.length?ws.map(x=>`<div style="height:${20+(x.w-min)/(max-min||1)*75}px"><span>${x.w}</span></div>`).join(""):'<div class="empty">Жин бүртгээгүй байна.</div>';$("weightHistory").textContent=ws.map(x=>x.d+": "+x.w+" кг").join(" · ");$("weightDate").value=today()}
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="nutri-mongol-backup.json";a.click();URL.revokeObjectURL(a.href)}
+$("importFile").addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!d.profile||!Array.isArray(d.meals))throw 0;data=d;save();render();alert("Нөөц амжилттай сэргээгдлээ.")}catch{alert("Нөөц файл буруу байна.")}};r.readAsText(f)})
+function clearToday(){if(!confirm("Өнөөдрийн хоол, дасгалын бүртгэлийг арилгах уу?"))return;data.meals=data.meals.filter(x=>x.date!==today());data.activities=data.activities.filter(x=>x.date!==today());save();render()}
+
+function setTheme(theme){localStorage.setItem("nutri_bbe_theme",theme);applyTheme()}
+function applyTheme(){let t=localStorage.getItem("nutri_bbe_theme")||"forest";document.body.classList.remove("theme-mountain","theme-ocean","theme-sunset","theme-minimal","theme-dark","custom-wallpaper");if(t!=="forest")document.body.classList.add("theme-"+t);let img=localStorage.getItem("nutri_bbe_wallpaper");if(img){document.body.style.backgroundImage=`url("${img}")`;document.body.classList.add("custom-wallpaper")}else{document.body.style.backgroundImage=""}}
+$("wallpaperInput").addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;if(f.size>2500000)return alert("Зураг 2.5 MB-аас бага байвал тохиромжтой.");let r=new FileReader();r.onload=()=>{try{localStorage.setItem("nutri_bbe_wallpaper",r.result);applyTheme()}catch(err){alert("Зураг хадгалах зай хүрэлцэхгүй байна. Бага хэмжээтэй зураг сонгоно уу.")}};r.readAsDataURL(f)});
+function resetWallpaper(){localStorage.removeItem("nutri_bbe_wallpaper");localStorage.setItem("nutri_bbe_theme","forest");applyTheme()}
+
+loadProfile();render();renderFoodList();renderActivities();
+applyTheme();
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script>
+</body></html>
